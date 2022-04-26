@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAGG,AAAD,uBAAY,CAAC;EACX,QAAQ,EAAE,QAAQ;EAClB,OAAO,EAAE,IAAI;EACb,GAAG,ECgHI,MAAM;ED/Gb,GAAG,EAAE,CAAC;EACN,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,IAAI;EACZ,OAAO,EAAE,QAAQ;EACjB,KAAK,EAAE,IAAI;EACX,UAAU,ECkHF,GAAG,CAAC,IAAI;CDjHjB;;AAEA,AAAD,oBAAS,AAAA,MAAM,CAAE,uBAAW,CAAC;EAC3B,KAAK,EAAE,CAAC;EACR,OAAO,EAAE,CAAC;EACV,gBAAgB,ECXN,OAAO;CDYlB;;AAEA,AAAD,4BAAiB,AAAA,MAAM,CAAE,uBAAW,CAAC;EACnC,gBAAgB,EAAE,OAAyB;CAC5C",
+    "sources": [
+        "../src/components/Header/FolderMenu/FolderEdit.module.scss",
+        "../src/styles/variables.scss"
+    ],
+    "names": [],
+    "file": "FolderEdit.module.css"
+}

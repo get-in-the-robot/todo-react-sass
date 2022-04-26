@@ -1,0 +1,13 @@
+.input {
+  border: none;
+  border-radius: 1.2rem;
+  outline: 2px solid #3bc9db;
+  font-size: inherit;
+  color: inherit;
+  letter-spacing: 0.08rem;
+}
+
+.input::placeholder {
+  color: inherit;
+}
+/*# sourceMappingURL=TextInput.module.css.map */

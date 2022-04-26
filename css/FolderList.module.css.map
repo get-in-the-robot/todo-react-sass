@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAGG,AAAD,0BAAe,CAAC;EACd,UAAU,EAAE,IAAI;EAChB,OAAO,EAAE,IAAI;EACb,KAAK,EAAE,IAAI;EACX,UAAU,EAAE,KAAK;EACjB,UAAU,EAAE,MAAM;EAClB,GAAG,EC8GK,MAAM;ED7Gd,qBAAqB,EAAE,OAAO;EAC9B,cAAc,EAAE,WAAW;EAC3B,WAAW,EAAE,MAAM;EACnB,UAAU,EAAE,GAAG,CAAC,KAAK,CCLZ,OAAO;EDMhB,eAAe,EAAE,IAAI;CAKtB;;AAhBA,AAaC,0BAba,AAaZ,mBAAmB,CAAC;EACnB,KAAK,EAAE,CAAC;CACT",
+    "sources": [
+        "../src/components/Header/FolderMenu/FolderList.module.scss",
+        "../src/styles/variables.scss"
+    ],
+    "names": [],
+    "file": "FolderList.module.css"
+}

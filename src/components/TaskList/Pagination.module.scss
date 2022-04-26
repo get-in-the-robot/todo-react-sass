@@ -1,0 +1,45 @@
+@import '../../styles/variables';
+
+.pagination {
+  margin-bottom: margin(big);
+  transition: gap 1s;
+
+  &__container {
+    @include flex-center(row);
+    list-style: none;
+    gap: 2.5rem;
+
+    @media (max-width: $media-650px) {
+      gap: 1.2rem;
+    }
+
+    @media (max-width: $media-545px) {
+      gap: 0.2rem;
+    }
+  }
+
+  &__btn {
+    @include flex-center(row);
+    height: 4rem;
+    width: 4rem;
+    background-color: #fff;
+    box-shadow: shadow(light);
+
+    &:hover {
+      @include button-hover($enable: true);
+    }
+
+    &--current {
+      background-color: $cyan-text;
+      color: #fff;
+
+      &:hover {
+        @include button-hover($enable: false);
+      }
+    }
+  }
+
+  &__goto-btn:hover {
+    @include button-hover($enable: false);
+  }
+}

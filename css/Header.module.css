@@ -1,0 +1,40 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 4.8rem;
+}
+
+.header__title {
+  font-size: 9.6rem;
+  font-weight: 700;
+  letter-spacing: -0.2rem;
+  background: linear-gradient(90deg, #cc5de8 0%, #3bc9db 54%, #69db7c 100%);
+  background-size: 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 3.6rem;
+  margin-bottom: 4.8rem;
+  animation: gradient 5s infinite;
+}
+
+@media (max-width: 34em) {
+  .header__title {
+    font-size: 8.2rem;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0;
+  }
+}
+/*# sourceMappingURL=Header.module.css.map */

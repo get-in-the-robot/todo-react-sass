@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,UAAU,CAAC;EACT,KAAK,EAAE,GAAG;EACV,MAAM,EAAE,MAAM;EACd,UAAU,ECyHA,GAAG,CAAC,IAAI;CDhHnB;;AAPC,MAAM,EAAE,SAAS,EAAE,IAAI;EALzB,AAAA,UAAU,CAAC;IAMP,KAAK,EAAE,GAAG;GAMb;;;AAHC,MAAM,EAAE,SAAS,EAAE,IAAI;EATzB,AAAA,UAAU,CAAC;IAUP,KAAK,EAAE,IAAI;GAEd",
+    "sources": [
+        "../src/components/UI/Container.module.scss",
+        "../src/styles/variables.scss"
+    ],
+    "names": [],
+    "file": "Container.module.css"
+}

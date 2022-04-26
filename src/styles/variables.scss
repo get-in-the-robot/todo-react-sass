@@ -1,0 +1,167 @@
+/////////////////////
+////// COLORS ///////
+/////////////////////
+
+// MAIN
+$gray-text: #343a40;
+$cyan-text: #0b7285;
+$cyan-medium: #3bc9db;
+$cyan-light: #99e9f2;
+$cyan-lightest: #e3fafc;
+$teal-lightest: #e6fcf5;
+$bg-gradient: linear-gradient(
+    145deg,
+    rgba(230, 252, 245, 1) 25%,
+    rgba(59, 201, 219, 1) 100%
+  )
+  fixed;
+
+// BUTTONS
+$green-button-main: #40c057;
+$green-button-main-lght: #69db7c;
+$gray-inactive-text: #868e96;
+$gray-inactive-background: #e9ecef;
+
+// HEADER
+$title-gradient: linear-gradient(
+  90deg,
+  rgba(204, 93, 232, 1) 0%,
+  rgba(59, 201, 219, 1) 54%,
+  rgba(105, 219, 124, 1) 100%
+);
+
+// EDITOR
+$grape-text: #862e9c;
+$grape-outline: #cc5de8;
+$grape-background: #be4bdb;
+$grape-background-light: #f8f0fc;
+$grape-gradient: linear-gradient(
+  180deg,
+  rgba(190, 75, 219, 1) 0%,
+  rgba(190, 75, 219, 1) 25%,
+  rgba(218, 119, 242, 1) 100%
+);
+
+// FORMS
+$red-invalid: #e03131;
+$red-light-invalid: #ff8787;
+
+///////////////////////
+////// ELEMENTS ///////
+///////////////////////
+$main-width: 90rem;
+$task-edit-width: 18rem;
+
+////////////////////
+////// FONTS ///////
+////////////////////
+$font-family: 'Work Sans', sans-serif;
+
+@function fontSize($font-size) {
+  @return map-get($font-sizes, $font-size);
+}
+$font-sizes: (
+  'small': 1.4rem,
+  'normal': 1.6rem,
+  'big': 2.4rem,
+);
+
+@function weight($weigth) {
+  @return map-get($font-weights, $weigth);
+}
+$font-weights: (
+  'normal': 400,
+  'bold': 700,
+);
+
+///////////////////
+////// MISC ///////
+///////////////////
+@mixin flex-center($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+@function shadow($shadow) {
+  @return map-get($box-shadows, $shadow);
+}
+$box-shadows: (
+  'light': 0 2px 10px 1px rgba(0, 0, 0, 0.1),
+  'medium': 0 6px 15px 1px rgba(0, 0, 0, 0.15),
+  'big': 0 12px 18px 1px rgba(0, 0, 0, 0.25),
+);
+
+@function radius($radius) {
+  @return map-get($border-radius, $radius);
+}
+$border-radius: (
+  'small': 0.4rem,
+  'normal': 1.2rem,
+  'round': 100rem,
+  'circle': 50%,
+);
+
+@function margin($margin) {
+  @return map-get($margins, $margin);
+}
+$margins: (
+  'normal': 1.2rem,
+  'medium': 3.2rem,
+  'big': 4.8rem,
+);
+
+@function gap($gap) {
+  @return map-get($gaps, $gap);
+}
+$gaps: (
+  'small': 0.8rem,
+  'normal': 1.2rem,
+  'big': 2.4rem,
+);
+
+@function transition($duration) {
+  @return map-get($transition, $duration);
+}
+$transition: (
+  'normal': all 0.3s,
+  'long': all 0.6s,
+);
+
+@mixin button-hover($enable: false) {
+  @if $enable {
+    transform: translateY(-10%) scale(1.05);
+    box-shadow: shadow(medium);
+  } @else {
+    transform: translate(0);
+    box-shadow: shadow(light);
+  }
+}
+
+///////////////////////////
+////// MEDIA QUERIES //////
+///////////////////////////
+$media-950px: 60em;
+$media-650px: 41em;
+$media-545px: 34em;
+
+////////////////////////
+////// ANIMATIONS //////
+////////////////////////
+@keyframes opener {
+  0% {
+    opacity: 0;
+    transform-origin: top;
+    transform: translateY(-22%) scaleY(0);
+  }
+
+  50% {
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}

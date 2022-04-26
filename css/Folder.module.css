@@ -1,0 +1,45 @@
+.folder-menu__folder {
+  position: relative;
+  padding: 1.2rem;
+  color: #0b7285;
+  border-radius: 1.2rem;
+  border: 1px solid #3bc9db;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: center;
+  background-color: #fff;
+}
+
+.folder-menu__folder:hover {
+  cursor: pointer;
+}
+
+.folder-menu__folder--active {
+  color: #fff;
+  background-color: #3bc9db;
+}
+
+.folder-menu__edit-menu {
+  position: absolute;
+  display: flex;
+  gap: 0.8rem;
+  top: 0;
+  right: -8rem;
+  opacity: 0;
+  height: 100%;
+  padding: 0 1.2rem;
+  color: #fff;
+  transition: all 0.3s;
+}
+
+.folder-menu__folder:hover .folder-menu__edit-menu {
+  right: 0;
+  opacity: 1;
+  background-color: #3bc9db;
+}
+
+.folder-menu__folder--active:hover .folder-menu__edit-menu {
+  background-color: #1b8795;
+}
+/*# sourceMappingURL=Folder.module.css.map */

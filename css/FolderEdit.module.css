@@ -1,0 +1,22 @@
+.folder-menu__edit-menu {
+  position: absolute;
+  display: flex;
+  gap: 0.8rem;
+  top: 0;
+  right: -8rem;
+  height: 100%;
+  padding: 0 1.2rem;
+  color: #fff;
+  transition: all 0.3s;
+}
+
+.folder-menu__folder:hover .folder-menu__edit-menu {
+  right: 0;
+  opacity: 1;
+  background-color: #3bc9db;
+}
+
+.folder-menu__folder--active:hover .folder-menu__edit-menu {
+  background-color: #1b8795;
+}
+/*# sourceMappingURL=FolderEdit.module.css.map */

@@ -1,0 +1,70 @@
+@import '../../../styles/variables';
+
+.task {
+  &__editor {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 2.4rem 4.8rem;
+    gap: gap(normal);
+    background: $grape-gradient;
+    border-bottom-left-radius: radius(normal);
+    border-bottom-right-radius: radius(normal);
+    animation: opener 0.6s;
+
+    @media (max-width: $media-545px) {
+      padding: 1.2rem 2.4rem;
+    }
+  }
+
+  &__icon-container {
+    @media (max-width: $media-545px) {
+      display: none;
+    }
+  }
+
+  &__title-edit {
+    width: 70%;
+    outline: inherit;
+    font-family: inherit;
+    padding: 1.2rem;
+    background-color: $grape-background-light;
+    color: $grape-text;
+    transition: transition(normal);
+
+    @media (max-width: $media-545px) {
+      width: 100%;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: #fff;
+    }
+  }
+
+  &__title-edit-container,
+  &__note-edit-container {
+    display: flex;
+    gap: gap(normal);
+    color: #fff;
+    width: 100%;
+  }
+
+  &__save-edit-btn {
+    align-self: flex-end;
+    width: 20%;
+    color: #fff;
+    font-weight: 700;
+    padding: 1.2rem;
+    background-color: #4d006f;
+
+    &:hover {
+      background-color: lighten(#4d006f, 10%);
+    }
+
+    &:active {
+      background-color: #4d006f;
+      transform: translateY(5%);
+    }
+  }
+}

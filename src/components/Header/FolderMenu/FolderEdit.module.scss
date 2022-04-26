@@ -1,0 +1,25 @@
+@import '../../../styles/variables';
+
+.folder-menu {
+  &__edit-menu {
+    position: absolute;
+    display: flex;
+    gap: gap(small);
+    top: 0;
+    right: -8rem;
+    height: 100%;
+    padding: 0 1.2rem;
+    color: #fff;
+    transition: transition(normal);
+  }
+
+  &__folder:hover &__edit-menu {
+    right: 0;
+    opacity: 1;
+    background-color: $cyan-medium;
+  }
+
+  &__folder--active:hover &__edit-menu {
+    background-color: darken($cyan-medium, 20%);
+  }
+}

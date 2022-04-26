@@ -1,0 +1,15 @@
+@import '../../styles/variables';
+
+.btn {
+  background: none;
+  border: none;
+  border-radius: radius(normal);
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  transition: transition(normal);
+
+  &:hover {
+    cursor: pointer;
+  }
+}

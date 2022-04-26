@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAGG,AAAD,gCAAqB,CAAC;EACpB,OAAO,EAAE,IAAI;EACb,KAAK,EAAE,IAAI;EACX,eAAe,EAAE,aAAa;EAC9B,aAAa,ECsGL,MAAM;CDrGf;;AAEA,AAAD,yBAAc,CAAC;ECsEf,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,MAAM;EACvB,WAAW,EAAE,MAAM;EACnB,cAAc,EDxES,GAAG;EACxB,GAAG,EC0GI,MAAM;CDzGd",
+    "sources": [
+        "../src/components/Header/FolderMenu/ControlsContainer.module.scss",
+        "../src/styles/variables.scss"
+    ],
+    "names": [],
+    "file": "ControlsContainer.module.css"
+}

@@ -1,0 +1,14 @@
+@import '../../styles/variables';
+
+.input {
+  border: none;
+  border-radius: radius(normal);
+  outline: 2px solid $cyan-medium;
+  font-size: inherit;
+  color: inherit;
+  letter-spacing: 0.08rem;
+
+  &::placeholder {
+    color: inherit;
+  }
+}

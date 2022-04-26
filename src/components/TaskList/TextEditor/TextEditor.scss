@@ -1,0 +1,81 @@
+@import '../../../styles/variables';
+
+.editor {
+  display: flex;
+  flex-direction: column;
+  gap: gap(normal);
+  width: 100%;
+  padding: 1.2rem;
+  overflow: hidden;
+  color: $grape-text;
+  border-radius: radius(normal);
+  background-color: $grape-background-light;
+  transition: transition(normal);
+
+  &:hover,
+  &:focus {
+    background-color: #fff;
+  }
+}
+
+.editor__btn-container {
+  display: flex;
+  gap: gap(normal);
+  flex-wrap: wrap;
+  padding-bottom: margin(normal);
+  border-bottom: 1px solid $grape-outline;
+
+  @media (max-width: $media-545px) {
+    // display: grid;
+  }
+}
+
+.DraftEditor-editorContainer {
+  padding: 1.2rem;
+}
+
+.public-DraftEditor-content {
+  height: 18rem;
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    width: 0.8rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: $grape-background-light;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $grape-background;
+    border-radius: radius(round);
+  }
+}
+
+.editor__btn {
+  background-color: lighten($grape-background, 20%);
+  padding: 0.8rem;
+
+  &:hover {
+    background-color: $grape-background;
+    color: #fff;
+  }
+
+  &--active {
+    background-color: $grape-background;
+    color: #fff;
+    font-weight: 700;
+  }
+}
+
+.readonly {
+  background-color: $cyan-lightest;
+  color: inherit;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+
+  &--complete {
+    @extend .readonly;
+    background-color: #e6fcf5;
+  }
+}

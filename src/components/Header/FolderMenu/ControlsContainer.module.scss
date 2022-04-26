@@ -1,0 +1,15 @@
+@import '../../../styles/variables';
+
+.folder-menu {
+  &__controls-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: margin(normal);
+  }
+
+  &__control-btn {
+    @include flex-center(row);
+    gap: gap(small);
+  }
+}

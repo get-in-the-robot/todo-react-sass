@@ -1,0 +1,15 @@
+.folder-menu__controls-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 1.2rem;
+}
+
+.folder-menu__control-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 0.8rem;
+}
+/*# sourceMappingURL=ControlsContainer.module.css.map */

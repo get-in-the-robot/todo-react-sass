@@ -1,0 +1,64 @@
+@import '../../../styles/variables.scss';
+
+.settings {
+  &__card {
+    @include flex-center(column);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0;
+    font-size: fontSize(normal);
+    box-shadow: shadow(big);
+    z-index: 5;
+    animation: moveup 0.6s;
+
+    @media (max-width: $media-650px) {
+      border-radius: radius(normal);
+    }
+
+    @media (max-width: $media-545px) {
+      border-radius: 0;
+      width: 100%;
+    }
+  }
+
+  &__heading {
+    @include flex-center(row);
+    background: linear-gradient(
+      235deg,
+      rgba(190, 75, 219, 1) 14%,
+      rgba(21, 170, 191, 1) 100%
+    );
+
+    border-top-left-radius: radius(normal);
+    border-top-right-radius: radius(normal);
+    color: #fff;
+    width: 100%;
+    padding: 2.4rem 0;
+    font-size: fontSize(big);
+    letter-spacing: 0.15rem;
+
+    @media (max-width: $media-545px) {
+      border-radius: 0;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 1.2rem;
+    right: 1.2rem;
+  }
+
+  @keyframes moveup {
+    0% {
+      opacity: 0;
+      transform: translate(-50%, 100%);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+    }
+  }
+}

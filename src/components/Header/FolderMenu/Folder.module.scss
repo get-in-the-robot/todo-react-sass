@@ -1,0 +1,48 @@
+@import '../../../styles/variables';
+
+.folder-menu {
+  &__folder {
+    position: relative;
+    padding: 1.2rem;
+    color: $cyan-text;
+    border-radius: radius(normal);
+    border: 1px solid $cyan-medium;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: center;
+    background-color: #fff;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &--active {
+      color: #fff;
+      background-color: $cyan-medium;
+    }
+  }
+
+  &__edit-menu {
+    position: absolute;
+    display: flex;
+    gap: gap(small);
+    top: 0;
+    right: -8rem;
+    opacity: 0;
+    height: 100%;
+    padding: 0 1.2rem;
+    color: #fff;
+    transition: transition(normal);
+  }
+
+  &__folder:hover &__edit-menu {
+    right: 0;
+    opacity: 1;
+    background-color: $cyan-medium;
+  }
+
+  &__folder--active:hover &__edit-menu {
+    background-color: darken($cyan-medium, 20%);
+  }
+}

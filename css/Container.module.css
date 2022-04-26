@@ -1,0 +1,18 @@
+.container {
+  width: 70%;
+  margin: 0 auto;
+  transition: all 0.3s;
+}
+
+@media (max-width: 60em) {
+  .container {
+    width: 90%;
+  }
+}
+
+@media (max-width: 41em) {
+  .container {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=Container.module.css.map */

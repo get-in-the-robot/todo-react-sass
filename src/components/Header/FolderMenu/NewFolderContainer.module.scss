@@ -1,0 +1,24 @@
+@import '../../../styles/variables';
+
+.folder-menu {
+  &__new-folder-container {
+    @include flex-center(row);
+    gap: gap(normal);
+    width: 100%;
+    margin-bottom: 2.4rem;
+  }
+
+  &__input {
+    width: 50%;
+    padding: 0.8rem;
+    font-size: fontSize(small);
+    border: 2px solid $cyan-medium;
+    outline: initial;
+  }
+
+  &__submit-btn {
+    width: fit-content;
+    padding: 1rem;
+    background-color: $cyan-light;
+  }
+}

@@ -1,0 +1,14 @@
+.btn {
+  background: none;
+  border: none;
+  border-radius: 1.2rem;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+/*# sourceMappingURL=Button.module.css.map */

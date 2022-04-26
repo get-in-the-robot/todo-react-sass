@@ -1,0 +1,33 @@
+.folder-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 28rem;
+  padding: 2.4rem;
+  padding-top: 1.2rem;
+  box-shadow: 0 6px 15px 1px rgba(0, 0, 0, 0.15);
+  z-index: 3;
+  animation: folder-menu 0.6s;
+}
+
+@media (max-width: 41em) {
+  .folder-menu {
+    border-radius: 1.2rem;
+  }
+}
+
+@keyframes folder-menu {
+  0% {
+    opacity: 0;
+    transform-origin: top;
+    transform: translateY(-22%) scaleY(0);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+/*# sourceMappingURL=FolderMenu.module.css.map */

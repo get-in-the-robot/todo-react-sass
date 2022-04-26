@@ -1,0 +1,69 @@
+@import '../../styles/variables';
+
+.header {
+  @include flex-center(column);
+  margin-bottom: margin(big);
+
+  &__title-section {
+    margin-top: margin(big);
+    display: flex;
+    align-items: flex-start;
+    gap: gap(normal);
+  }
+
+  &__title {
+    font-size: 9.6rem;
+    font-weight: weight(bold);
+    letter-spacing: -0.2rem;
+    background: $title-gradient;
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    margin-bottom: margin(big);
+    animation: gradient 5s infinite;
+
+    @media (max-width: $media-545px) {
+      font-size: 8.2rem;
+    }
+
+    @keyframes gradient {
+      0% {
+        background-position: 0;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0;
+      }
+    }
+  }
+
+  &__settings {
+    color: $cyan-text;
+
+    &:hover {
+      cursor: pointer;
+      animation: rotation 2s ease-out;
+    }
+
+    @keyframes rotation {
+      0% {
+        transform: rotate(0);
+        color: $cyan-text;
+      }
+
+      50% {
+        transform: rotate(180deg);
+        color: $grape-background;
+      }
+
+      100% {
+        transform: rotate(-360deg);
+        color: $cyan-text;
+      }
+    }
+  }
+}

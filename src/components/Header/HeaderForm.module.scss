@@ -1,0 +1,33 @@
+@import '../../styles/variables';
+
+.header {
+  &__form {
+    @include flex-center(column);
+    width: 100%;
+    max-width: $main-width;
+    padding: 3.6rem;
+    gap: gap(normal);
+
+    @media (max-width: $media-545px) {
+      padding: 3.6rem 1.2rem;
+    }
+  }
+
+  &__submit-btn {
+    padding: 1.2rem 2.4rem;
+    font-weight: weight(bold);
+    background-color: $green-button-main;
+    color: #fff;
+
+    &:hover {
+      background-color: $green-button-main-lght;
+    }
+
+    &--disabled {
+      @extend .header__submit-btn;
+      pointer-events: none;
+      color: $gray-inactive-text;
+      background-color: $gray-inactive-background;
+    }
+  }
+}

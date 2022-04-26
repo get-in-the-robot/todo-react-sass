@@ -1,0 +1,152 @@
+@import '../../../styles/variables';
+
+.task {
+  width: 100%;
+  animation: task-add 0.4s;
+
+  @keyframes task-add {
+    0% {
+      transform: translateY(-20%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  &:last-child &__container {
+    border-bottom: none;
+  }
+
+  &__container {
+    @include flex-center(row);
+    position: relative;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 1.2rem;
+    border-radius: radius(normal);
+
+    @media (max-width: $media-545px) {
+      @include flex-center(column);
+      align-items: flex-start;
+      padding: 1.2rem;
+      border-bottom: 1px solid $cyan-light;
+      border-radius: 0;
+    }
+
+    &:hover {
+      background-color: $cyan-lightest;
+    }
+
+    &--edit {
+      background-color: $grape-background;
+      border-bottom: 0;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      opacity: 1;
+      color: #fff;
+
+      @media (max-width: $media-545px) {
+        border-top-left-radius: radius(normal);
+        border-top-right-radius: radius(normal);
+      }
+
+      &:hover {
+        background-color: $grape-background;
+      }
+    }
+
+    &--active {
+      background-color: $cyan-lightest;
+      border-bottom: 0;
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
+    &--complete.task__container--active {
+      opacity: 1;
+    }
+
+    &--complete.task__container--edit {
+      background-color: $grape-background;
+      opacity: 1;
+    }
+
+    &--complete {
+      background-color: $teal-lightest;
+      opacity: 0.5;
+      transition: all 0.3s;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__main-container {
+    @include flex-center(row);
+    position: relative;
+    justify-content: space-between;
+    overflow: hidden;
+    width: 90%;
+    padding: 2.4rem 1.2rem;
+
+    @media (max-width: $media-545px) {
+      overflow: initial;
+      width: 100%;
+      padding: 0;
+    }
+  }
+
+  &__title {
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    transition: transition(normal);
+  }
+
+  &__menu {
+    position: absolute;
+    list-style: none;
+    right: -50%;
+    display: flex;
+    justify-content: flex-end;
+    width: $task-edit-width;
+    gap: 1rem;
+    opacity: 0;
+    transition: transition(normal);
+    background-color: inherit;
+
+    @media (max-width: $media-545px) {
+      right: 0;
+      top: -35%;
+      gap: 0.4rem;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &:hover &__menu {
+    right: 0;
+    opacity: 1;
+  }
+
+  &:hover &__title {
+    width: calc(100% - #{$task-edit-width});
+  }
+
+  &__date-container {
+    text-align: end;
+    width: fit-content;
+    white-space: nowrap;
+  }
+
+  &__date {
+    font-size: fontSize(small);
+    padding: 0 1.2rem;
+  }
+}

@@ -1,0 +1,23 @@
+@import './styles/resets', './styles/variables';
+
+body {
+  font-family: $font-family;
+  font-size: fontSize(normal);
+  font-weight: weight(normal);
+  background-color: $teal-lightest;
+  background: $bg-gradient;
+  color: $cyan-text;
+  height: 100%;
+}
+
+.color--green {
+  color: $green-button-main;
+}
+
+.color--red {
+  color: $red-invalid;
+}
+
+.hidden {
+  display: none !important;
+}
